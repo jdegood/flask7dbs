@@ -24,7 +24,16 @@
 
     <body>
         <table>
+            <!-- column header for loop in jinja template -->
+            <thead>
+                <tr>
+                {%for head in heads%}
+                    <th>{{head}}</th>
+                {%endfor%}
+                </tr>
+            </thead>
             <!-- nested for loops in jinja template -->
+            <tbody>
             {%for row in rows%}
                 <tr>
                 {%for col in row%}
@@ -32,6 +41,7 @@
                 {%endfor%}
                 </tr>
             {%endfor%}
+            </tbody>
         </table>
     </body>
 </html>

@@ -98,7 +98,8 @@ def form():
 @app.route('/venue-handler', methods=['POST'])
 def venue_handler():
     rows = connect('SELECT venue_id, title FROM events WHERE venue_id = ' + request.form['venue_id'] + ';')
-    return render_template('my-result.html', rows=rows)
+    heads = ['venue_id', 'title']
+    return render_template('my-result.html', rows=rows, heads=heads)
 
 # handle query POST and serve result web page
 @app.route('/query-handler', methods=['POST'])
