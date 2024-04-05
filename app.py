@@ -20,10 +20,7 @@ You must perform this one-time installation in the CSC 315 VM:
 
 # install python pip and psycopg2 packages
 sudo pacman -Syu
-sudo pacman -S python-pip python-psycopg2
-
-# install flask
-pip install flask
+sudo pacman -S python-pip python-psycopg2 python-flask
 
 ----
 
